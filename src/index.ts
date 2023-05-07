@@ -24,7 +24,7 @@ const prisma = new PrismaClient();
 const app= Express()
 app.use(Express.json());
 app.use(cors());
-const PORT:string="6000"
+const PORT:string=process.env.PORT||"6000"
 
 
 app.post('/register', async (req, res) => {
