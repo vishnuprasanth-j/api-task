@@ -26,6 +26,9 @@ app.use(Express.json());
 app.use(cors());
 const PORT:string=process.env.PORT||"6000"
 
+app.get('/test',async(req,res)=>{
+  res.json("hello")
+})
 
 app.post('/register', async (req, res) => {
   const { name, email, password } = req.body
